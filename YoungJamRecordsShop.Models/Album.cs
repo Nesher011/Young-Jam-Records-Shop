@@ -15,6 +15,6 @@ namespace YoungJamRecordsShop.Models
 
         [Range(0.01, 999999.99)]
         [Required]
-        public float Price { get; set; }
+        public double Price { get; set; }
     }
 }

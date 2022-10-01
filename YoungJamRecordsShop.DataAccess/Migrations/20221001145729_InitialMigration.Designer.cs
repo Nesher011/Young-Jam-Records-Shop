@@ -11,7 +11,7 @@ using YoungJamRecordsShop.DataAccess;
 namespace YoungJamRecordsShop.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221001144521_InitialMigration")]
+    [Migration("20221001145729_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,8 +39,8 @@ namespace YoungJamRecordsShop.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<float>("Price")
-                        .HasColumnType("real");
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
 
                     b.HasKey("Id");
 

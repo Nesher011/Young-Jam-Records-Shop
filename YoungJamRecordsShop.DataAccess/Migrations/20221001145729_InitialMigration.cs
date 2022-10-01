@@ -16,7 +16,7 @@ namespace YoungJamRecordsShop.DataAccess.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Author = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Price = table.Column<float>(type: "real", nullable: false)
+                    Price = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {
