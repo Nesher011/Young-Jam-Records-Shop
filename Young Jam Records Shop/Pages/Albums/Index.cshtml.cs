@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Young_Jam_Records_Shop.Data;
-using Young_Jam_Records_Shop.Model;
+using YoungJamRecordsShop.DataAccess;
+using YoungJamRecordsShop.Models;
 
-namespace Young_Jam_Records_Shop.Pages.Albums
+namespace YoungJamRecordsShopWeb.Pages.Albums
 {
     public class IndexModel : PageModel
     {

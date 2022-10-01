@@ -2,9 +2,9 @@
 
 #nullable disable
 
-namespace Young_Jam_Records_Shop.Migrations
+namespace YoungJamRecordsShop.DataAccess.Migrations
 {
-    public partial class AddAlbumToDb : Migration
+    public partial class InitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -16,7 +16,7 @@ namespace Young_Jam_Records_Shop.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Author = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Price = table.Column<int>(type: "int", nullable: false)
+                    Price = table.Column<float>(type: "real", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -4,7 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>Young_Jam_Records_Shop</RootNamespace>
+    <RootNamespace>YoungJamRecordsShopWeb</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,6 +14,11 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\YoungJamRecordsShop.DataAccess\YoungJamRecordsShop.DataAccess.csproj" />
+    <ProjectReference Include="..\YoungJamRecordsShop.Models\YoungJamRecordsShop.Models.csproj" />
   </ItemGroup>
 
 </Project>

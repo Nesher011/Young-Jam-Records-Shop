@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Young_Jam_Records_Shop.Pages
+namespace YoungJamRecordsShopWeb.Pages
 {
     public class PrivacyModel : PageModel
     {

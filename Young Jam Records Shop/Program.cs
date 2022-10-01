@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Young_Jam_Records_Shop.Data;
+using YoungJamRecordsShop.DataAccess;
 
 var builder = WebApplication.CreateBuilder(args);
 

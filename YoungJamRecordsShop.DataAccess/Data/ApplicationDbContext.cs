@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Young_Jam_Records_Shop.Model;
+using YoungJamRecordsShop.Models;
 
-namespace Young_Jam_Records_Shop.Data
+namespace YoungJamRecordsShop.DataAccess
 {
     public class ApplicationDbContext : DbContext
     {

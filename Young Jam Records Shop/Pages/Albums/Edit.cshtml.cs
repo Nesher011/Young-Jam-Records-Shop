@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel;
-using Young_Jam_Records_Shop.Data;
-using Young_Jam_Records_Shop.Model;
+using YoungJamRecordsShop.DataAccess;
+using YoungJamRecordsShop.Models;
 
-namespace Young_Jam_Records_Shop.Pages.Albums
+namespace YoungJamRecordsShopWeb.Pages.Albums
 {
     [BindProperties]
     public class EditModel : PageModel

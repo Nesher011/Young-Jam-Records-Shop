@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Young Jam Records Shop", "Young Jam Records Shop\Young Jam Records Shop.csproj", "{1EAC4787-0FBE-4E9B-B53F-DA11CF117BBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YoungJamRecordsShopWeb", "Young Jam Records Shop\YoungJamRecordsShopWeb.csproj", "{1EAC4787-0FBE-4E9B-B53F-DA11CF117BBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoungJamRecordsShop.DataAccess", "YoungJamRecordsShop.DataAccess\YoungJamRecordsShop.DataAccess.csproj", "{23D2958B-A458-4433-81EE-50F42C29070F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoungJamRecordsShop.Models", "YoungJamRecordsShop.Models\YoungJamRecordsShop.Models.csproj", "{D4114E7C-4F12-4719-B091-76C66BB15503}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoungJamRecordsShop.Utility", "YoungJamRecordsShop.Utility\YoungJamRecordsShop.Utility.csproj", "{924E8697-D154-49B6-A0B6-4357A3C428D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{1EAC4787-0FBE-4E9B-B53F-DA11CF117BBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EAC4787-0FBE-4E9B-B53F-DA11CF117BBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EAC4787-0FBE-4E9B-B53F-DA11CF117BBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23D2958B-A458-4433-81EE-50F42C29070F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23D2958B-A458-4433-81EE-50F42C29070F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23D2958B-A458-4433-81EE-50F42C29070F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23D2958B-A458-4433-81EE-50F42C29070F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4114E7C-4F12-4719-B091-76C66BB15503}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4114E7C-4F12-4719-B091-76C66BB15503}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4114E7C-4F12-4719-B091-76C66BB15503}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4114E7C-4F12-4719-B091-76C66BB15503}.Release|Any CPU.Build.0 = Release|Any CPU
+		{924E8697-D154-49B6-A0B6-4357A3C428D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{924E8697-D154-49B6-A0B6-4357A3C428D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{924E8697-D154-49B6-A0B6-4357A3C428D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{924E8697-D154-49B6-A0B6-4357A3C428D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

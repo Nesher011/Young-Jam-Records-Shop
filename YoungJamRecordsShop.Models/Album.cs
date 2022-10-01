@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Young_Jam_Records_Shop.Model
+namespace YoungJamRecordsShop.Models
 {
     public class Album
     {
@@ -15,6 +15,6 @@ namespace Young_Jam_Records_Shop.Model
 
         [Range(0.01, 999999.99)]
         [Required]
-        public decimal Price { get; set; }
+        public float Price { get; set; }
     }
 }
