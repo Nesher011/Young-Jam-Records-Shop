@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using YoungJamRecordsShop.DataAccess;
+using YoungJamRecordsShop.DataAccess.Repository.IRepository;
 using YoungJamRecordsShop.Models;
 
 namespace YoungJamRecordsShopWeb.Pages.Albums
@@ -8,12 +8,12 @@ namespace YoungJamRecordsShopWeb.Pages.Albums
     [BindProperties]
     public class CreateModel : PageModel
     {
-        private readonly ApplicationDbContext _dbContext;
+        private readonly IUnitOfWork _unitOfWork;
         public Album Album { get; set; }
 
-        public CreateModel(ApplicationDbContext dbContext)
+        public CreateModel(IUnitOfWork unitOfWork)
         {
-            _dbContext = dbContext;
+            _unitOfWork = unitOfWork;
         }
 
         public void OnGet()
@@ -24,8 +24,8 @@ namespace YoungJamRecordsShopWeb.Pages.Albums
         {
             if (ModelState.IsValid)
             {
-                await _dbContext.Album.AddAsync(Album);
-                await _dbContext.SaveChangesAsync();
+                _unitOfWork.Album.Add(Album);
+                _unitOfWork.Save();
                 TempData["success"] = "Album added successfully";
                 return RedirectToPage("Index");
             }

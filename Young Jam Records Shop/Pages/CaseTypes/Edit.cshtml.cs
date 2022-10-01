@@ -3,33 +3,34 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using YoungJamRecordsShop.DataAccess.Repository.IRepository;
 using YoungJamRecordsShop.Models;
 
-namespace YoungJamRecordsShopWeb.Pages.Albums
+namespace YoungJamRecordsShopWeb.Pages.CaseTypes
 {
     [BindProperties]
-    public class DeleteModel : PageModel
+    public class EditModel : PageModel
     {
         private readonly IUnitOfWork _unitOfWork;
-        public Album Album { get; set; }
+        public CaseType CaseType { get; set; }
 
-        public DeleteModel(IUnitOfWork unitOfWork)
+        public EditModel(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
 
         public void OnGet(int id)
         {
-            Album = _unitOfWork.Album.GetFirstOrDefault(u => u.Id == id);
+            CaseType = _unitOfWork.CaseType.GetFirstOrDefault(u => u.Id == id);
         }
 
         public async Task<IActionResult> OnPost()
         {
-            if (Album != null)
+            if (ModelState.IsValid)
             {
-                _unitOfWork.Album.Remove(Album);
+                _unitOfWork.CaseType.Update(CaseType);
                 _unitOfWork.Save();
-                TempData["success"] = "Album deleted successfully";
+                TempData["success"] = "Case Type edited successfully";
+                return RedirectToPage("Index");
             }
-            return RedirectToPage("Index");
+            return Page();
         }
     }
 }

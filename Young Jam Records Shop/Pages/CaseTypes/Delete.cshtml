@@ -1,0 +1,25 @@
+﻿@page
+@model YoungJamRecordsShopWeb.Pages.CaseTypes.DeleteModel
+@{
+    <form method="post">
+        <input hidden asp-for="CaseType.Id" />
+        <div class="border p-3 mt-4">
+            <div class="row pb-2">
+                <h2 class="text-primary pl-3">Add Album</h2>
+                <hr />
+            </div>
+            <div class="mb-3">
+                <label asp-for="CaseType.Name"></label>
+                <input asp-for="@Model.CaseType.Name" class="form-control" disabled />
+            </div>
+            <button type="submit" class="btn btn-danger" style="width:150px;">Delete</button>
+            <a asp-page="index" class="btn btn-outline-secondary" style="width:150px;">Back</a>
+        </div>
+    </form>
+}
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+    }
