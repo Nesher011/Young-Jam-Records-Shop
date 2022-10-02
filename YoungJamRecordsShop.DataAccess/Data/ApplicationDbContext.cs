@@ -9,8 +9,9 @@ namespace YoungJamRecordsShop.DataAccess
         {
         }
 
-        public DbSet<Album> Album { get; set; }
+        public DbSet<AlbumType> AlbumType { get; set; }
 
         public DbSet<CaseType> CaseType { get; set; }
+        public DbSet<Product> Product { get; set; }
     }
 }

@@ -2,8 +2,8 @@
 
 namespace YoungJamRecordsShop.DataAccess.Repository.IRepository
 {
-    public interface IAlbumRepository : IRepository<Album>
+    public interface IAlbumTypeRepository : IRepository<AlbumType>
     {
-        void Update(Album obj);
+        void Update(AlbumType obj);
     }
 }

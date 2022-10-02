@@ -20,12 +20,14 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="Administrator" asp-page="/Albums/Index">Albums</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Content Management</a>
+                            <div class="dropdown-menu text-light">
+                                <a class="dropdown-item text-light" asp-area="Administrator" asp-page="/Albums/Index">Albums</a>
+                                <a class="dropdown-item text-light" asp-area="Administrator" asp-page="/CaseTypes/Index">Case Types</a>
+                            </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="Administrator" asp-page="/CaseTypes/Index">Case Types</a>
-                        </li>
+
                     </ul>
                 </div>
             </div>

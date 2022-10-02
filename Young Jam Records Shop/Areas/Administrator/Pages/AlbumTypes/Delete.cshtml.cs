@@ -3,29 +3,29 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using YoungJamRecordsShop.DataAccess.Repository.IRepository;
 using YoungJamRecordsShop.Models;
 
-namespace YoungJamRecordsShopWeb.Areas.Administrator.Albums
+namespace YoungJamRecordsShopWeb.Areas.Administrator.Pages.AlbumTypes
 {
     [BindProperties]
     public class DeleteModel : PageModel
     {
         private readonly IUnitOfWork _unitOfWork;
-        public Album Album { get; set; }
+        public AlbumType AlbumType { get; set; }
 
         public DeleteModel(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
 
-        public void OnGet(int id)
+        public void OnGet(Guid id)
         {
-            Album = _unitOfWork.Album.GetFirstOrDefault(u => u.Id == id);
+            AlbumType = _unitOfWork.AlbumType.GetFirstOrDefault(u => u.Id == id);
         }
 
         public async Task<IActionResult> OnPost()
         {
-            if (Album != null)
+            if (AlbumType != null)
             {
-                _unitOfWork.Album.Remove(Album);
+                _unitOfWork.AlbumType.Remove(AlbumType);
                 _unitOfWork.Save();
                 TempData["success"] = "Album deleted successfully";
             }

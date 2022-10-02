@@ -5,7 +5,7 @@ namespace YoungJamRecordsShop.Models
     public class CaseType
     {
         [Key]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         [Display(Name = "Case Type")]
         [Required]

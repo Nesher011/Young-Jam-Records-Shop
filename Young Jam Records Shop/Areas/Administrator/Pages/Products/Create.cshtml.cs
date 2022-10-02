@@ -3,31 +3,30 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using YoungJamRecordsShop.DataAccess.Repository.IRepository;
 using YoungJamRecordsShop.Models;
 
-namespace YoungJamRecordsShopWeb.Pages.CaseTypes
+namespace YoungJamRecordsShopWeb.Areas.Administrator.Pages.Products
 {
     [BindProperties]
-    public class EditModel : PageModel
+    public class CreateModel : PageModel
     {
         private readonly IUnitOfWork _unitOfWork;
-        public CaseType CaseType { get; set; }
+        public Product Product { get; set; }
 
-        public EditModel(IUnitOfWork unitOfWork)
+        public CreateModel(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
 
-        public void OnGet(Guid id)
+        public void OnGet()
         {
-            CaseType = _unitOfWork.CaseType.GetFirstOrDefault(u => u.Id == id);
         }
 
         public async Task<IActionResult> OnPost()
         {
             if (ModelState.IsValid)
             {
-                _unitOfWork.CaseType.Update(CaseType);
+                _unitOfWork.Product.Add(Product);
                 _unitOfWork.Save();
-                TempData["success"] = "Case Type edited successfully";
+                TempData["success"] = "Album added successfully";
                 return RedirectToPage("Index");
             }
             return Page();

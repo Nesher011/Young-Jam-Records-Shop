@@ -3,13 +3,13 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using YoungJamRecordsShop.DataAccess.Repository.IRepository;
 using YoungJamRecordsShop.Models;
 
-namespace YoungJamRecordsShopWeb.Pages.CaseTypes
+namespace YoungJamRecordsShopWeb.Areas.Administrator.Pages.Products
 {
     [BindProperties]
     public class DeleteModel : PageModel
     {
         private readonly IUnitOfWork _unitOfWork;
-        public CaseType CaseType { get; set; }
+        public Product Product { get; set; }
 
         public DeleteModel(IUnitOfWork unitOfWork)
         {
@@ -18,14 +18,14 @@ namespace YoungJamRecordsShopWeb.Pages.CaseTypes
 
         public void OnGet(Guid id)
         {
-            CaseType = _unitOfWork.CaseType.GetFirstOrDefault(u => u.Id == id);
+            Product = _unitOfWork.Product.GetFirstOrDefault(u => u.Id == id);
         }
 
         public async Task<IActionResult> OnPost()
         {
-            if (CaseType != null)
+            if (Product != null)
             {
-                _unitOfWork.CaseType.Remove(CaseType);
+                _unitOfWork.Product.Remove(Product);
                 _unitOfWork.Save();
                 TempData["success"] = "Album deleted successfully";
             }

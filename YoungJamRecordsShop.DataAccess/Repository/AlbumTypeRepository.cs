@@ -3,18 +3,18 @@ using YoungJamRecordsShop.Models;
 
 namespace YoungJamRecordsShop.DataAccess.Repository
 {
-    public class AlbumRepository : Repository<Album>, IAlbumRepository
+    public class AlbumTypeRepository : Repository<AlbumType>, IAlbumTypeRepository
     {
         private ApplicationDbContext _dbContext;
 
-        public AlbumRepository(ApplicationDbContext dbContext) : base(dbContext)
+        public AlbumTypeRepository(ApplicationDbContext dbContext) : base(dbContext)
         {
             _dbContext = dbContext;
         }
 
-        public void Update(Album obj)
+        public void Update(AlbumType obj)
         {
-            _dbContext.Album.Update(obj);
+            _dbContext.AlbumType.Update(obj);
         }
     }
 }

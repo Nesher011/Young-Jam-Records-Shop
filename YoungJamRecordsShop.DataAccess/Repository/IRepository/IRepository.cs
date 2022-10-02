@@ -4,7 +4,7 @@ namespace YoungJamRecordsShop.DataAccess.Repository.IRepository
 {
     public interface IRepository<T> where T : class
     {
-        //T - Album
+        //T - Album Type
         T GetFirstOrDefault(Expression<Func<T, bool>> filter);
 
         IEnumerable<T> GetAll();

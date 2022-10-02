@@ -1,5 +1,5 @@
 ﻿@page
-@model YoungJamRecordsShopWeb.Areas.Administrator.Albums.IndexModel
+@model             IndexModel
 
 <partial name="_Notification" />
 
@@ -34,11 +34,12 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach(var obj in Model.Albums){
+                @foreach (var obj in Model.Products)
+                {
                     <tr>
-                        <td width="30%">@obj.Name</td>
+                        <td width="30%">@obj.Title</td>
                         <td width="30%">@obj.Author</td>
-                        <td width="20%">@obj.Price</td>
+                        <td width="20%">@obj.ListPrice</td>
                         <td width="20%">
                             <div class="w-75 btn-group" role="group">
                                 <a asp-page="Edit" asp-route-id="@obj.Id" class="btn btn-primary mx-2">Edit</a>

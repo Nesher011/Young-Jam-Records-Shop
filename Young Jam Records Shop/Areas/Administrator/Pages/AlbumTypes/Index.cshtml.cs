@@ -2,12 +2,12 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using YoungJamRecordsShop.DataAccess.Repository.IRepository;
 using YoungJamRecordsShop.Models;
 
-namespace YoungJamRecordsShopWeb.Areas.Administrator.Albums
+namespace YoungJamRecordsShopWeb.Areas.Administrator.Pages.AlbumTypes
 {
     public class IndexModel : PageModel
     {
         private readonly IUnitOfWork _unitOfWork;
-        public IEnumerable<Album> Albums { get; set; }
+        public IEnumerable<AlbumType> AlbumTypes { get; set; }
 
         public IndexModel(IUnitOfWork unitOfWork)
 
@@ -17,7 +17,7 @@ namespace YoungJamRecordsShopWeb.Areas.Administrator.Albums
 
         public void OnGet()
         {
-            Albums = _unitOfWork.Album.GetAll();
+            AlbumTypes = _unitOfWork.AlbumType.GetAll();
         }
     }
 }

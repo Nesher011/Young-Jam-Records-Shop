@@ -1,4 +1,5 @@
 ﻿using YoungJamRecordsShop.DataAccess.Repository.IRepository;
+using YoungJamRecordsShop.Models;
 
 namespace YoungJamRecordsShop.DataAccess.Repository
 {
@@ -9,12 +10,14 @@ namespace YoungJamRecordsShop.DataAccess.Repository
         public UnitOfWork(ApplicationDbContext dbContext)
         {
             _dbContext = dbContext;
-            Album = new AlbumRepository(_dbContext);
+            AlbumType = new AlbumTypeRepository(_dbContext);
             CaseType = new CaseTypeRepository(_dbContext);
+            Product = new ProductRepository(_dbContext);
         }
 
-        public IAlbumRepository Album { get; private set; }
+        public IAlbumTypeRepository AlbumType { get; private set; }
         public ICaseTypeRepository CaseType { get; private set; }
+        public IProductRepository Product { get; private set; }
 
         public void Save()
         {

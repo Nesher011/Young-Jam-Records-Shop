@@ -3,29 +3,29 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using YoungJamRecordsShop.DataAccess.Repository.IRepository;
 using YoungJamRecordsShop.Models;
 
-namespace YoungJamRecordsShopWeb.Areas.Administrator.Albums
+namespace YoungJamRecordsShopWeb.Areas.Administrator.Pages.AlbumTypes
 {
     [BindProperties]
     public class EditModel : PageModel
     {
         private readonly IUnitOfWork _unitOfWork;
-        public Album Album { get; set; }
+        public AlbumType AlbumType { get; set; }
 
         public EditModel(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
 
-        public void OnGet(int id)
+        public void OnGet(Guid id)
         {
-            Album = _unitOfWork.Album.GetFirstOrDefault(u => u.Id == id);
+            AlbumType = _unitOfWork.AlbumType.GetFirstOrDefault(u => u.Id == id);
         }
 
         public async Task<IActionResult> OnPost()
         {
             if (ModelState.IsValid)
             {
-                _unitOfWork.Album.Update(Album);
+                _unitOfWork.AlbumType.Update(AlbumType);
                 _unitOfWork.Save();
                 TempData["success"] = "Album edited successfully";
                 return RedirectToPage("Index");

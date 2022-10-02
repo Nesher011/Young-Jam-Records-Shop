@@ -16,8 +16,4 @@
     <ProjectReference Include="..\YoungJamRecordsShop.Models\YoungJamRecordsShop.Models.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Migrations\" />
-  </ItemGroup>
-
 </Project>

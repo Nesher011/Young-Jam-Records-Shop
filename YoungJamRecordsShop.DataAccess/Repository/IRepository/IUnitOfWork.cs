@@ -2,9 +2,11 @@
 {
     public interface IUnitOfWork
     {
-        IAlbumRepository Album { get; }
+        IAlbumTypeRepository AlbumType { get; }
 
         ICaseTypeRepository CaseType { get; }
+
+        IProductRepository Product { get; }
 
         void Save();
     }
