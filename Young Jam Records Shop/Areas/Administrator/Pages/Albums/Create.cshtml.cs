@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using YoungJamRecordsShop.DataAccess.Repository.IRepository;
 using YoungJamRecordsShop.Models;
 
-namespace YoungJamRecordsShopWeb.Pages.Albums
+namespace YoungJamRecordsShopWeb.Areas.Administrator.Albums
 {
     [BindProperties]
     public class CreateModel : PageModel

@@ -3,15 +3,15 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using YoungJamRecordsShop.DataAccess.Repository.IRepository;
 using YoungJamRecordsShop.Models;
 
-namespace YoungJamRecordsShopWeb.Pages.Albums
+namespace YoungJamRecordsShopWeb.Areas.Administrator.Albums
 {
     [BindProperties]
-    public class EditModel : PageModel
+    public class DeleteModel : PageModel
     {
         private readonly IUnitOfWork _unitOfWork;
         public Album Album { get; set; }
 
-        public EditModel(IUnitOfWork unitOfWork)
+        public DeleteModel(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
@@ -23,14 +23,13 @@ namespace YoungJamRecordsShopWeb.Pages.Albums
 
         public async Task<IActionResult> OnPost()
         {
-            if (ModelState.IsValid)
+            if (Album != null)
             {
-                _unitOfWork.Album.Update(Album);
+                _unitOfWork.Album.Remove(Album);
                 _unitOfWork.Save();
-                TempData["success"] = "Album edited successfully";
-                return RedirectToPage("Index");
+                TempData["success"] = "Album deleted successfully";
             }
-            return Page();
+            return RedirectToPage("Index");
         }
     }
 }
