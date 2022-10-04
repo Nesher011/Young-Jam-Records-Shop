@@ -13,6 +13,6 @@ namespace YoungJamRecordsShop.Models
         public Guid Id { get; set; }
 
         [Required]
-        public string Format { get; set; }
+        public string AlbumFormat { get; set; }
     }
 }
