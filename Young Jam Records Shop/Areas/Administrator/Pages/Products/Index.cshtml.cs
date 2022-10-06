@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using YoungJamRecordsShop.DataAccess.Repository.IRepository;
 using YoungJamRecordsShop.Models;
@@ -17,7 +18,7 @@ namespace YoungJamRecordsShopWeb.Areas.Administrator.Pages.Products
 
         public void OnGet()
         {
-            Products = _unitOfWork.Product.GetAll();
+            Products = _unitOfWork.Product.GetAll(includeProperties: "AlbumType,CaseType");
         }
     }
 }

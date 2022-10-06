@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System.ComponentModel.DataAnnotations;
 
 namespace YoungJamRecordsShop.Models
 {
@@ -26,10 +27,19 @@ namespace YoungJamRecordsShop.Models
         [Required]
         public double Price { get; set; }
 
-        public string CoverImageUrl { get; set; }
+        [ValidateNever]
+        public string? CoverImageUrl { get; set; }
+
+        [ValidateNever]
         public Guid AlbumTypeId { get; set; }
+
+        [ValidateNever]
         public AlbumType AlbumType { get; set; }
+
+        [ValidateNever]
         public Guid CaseTypeId { get; set; }
+
+        [ValidateNever]
         public CaseType CaseType { get; set; }
     }
 }
