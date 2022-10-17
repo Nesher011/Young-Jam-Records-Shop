@@ -22,6 +22,7 @@
   <ItemGroup>
     <ProjectReference Include="..\YoungJamRecordsShop.DataAccess\YoungJamRecordsShop.DataAccess.csproj" />
     <ProjectReference Include="..\YoungJamRecordsShop.Models\YoungJamRecordsShop.Models.csproj" />
+    <ProjectReference Include="..\YoungJamRecordsShop.Utility\YoungJamRecordsShop.Utility.csproj" />
   </ItemGroup>
 
   <ItemGroup>
