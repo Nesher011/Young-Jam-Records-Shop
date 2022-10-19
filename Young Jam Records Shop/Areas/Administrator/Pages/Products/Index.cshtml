@@ -51,7 +51,7 @@
                         <td width="30%">@obj.EAN</td>
                         <td width="30%">@obj.AlbumType.AlbumFormat</td>
                         <td width="30%">@obj.CaseType.Name</td>
-                        <td width="20%">@obj.ListPrice</td>
+                        <td width="20%">@obj.ListPrice.ToString("0.00")</td>
                         <td width="20%">
                             <div class="w-75 btn-group" role="group">
                                 <a asp-page="Upsert" asp-route-id="@obj.Id" class="btn btn-primary mx-2">Edit</a>
