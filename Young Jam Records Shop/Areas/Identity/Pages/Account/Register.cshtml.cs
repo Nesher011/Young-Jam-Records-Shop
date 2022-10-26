@@ -5,6 +5,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Text.Encodings.Web;
@@ -107,7 +108,6 @@ namespace YoungJamRecordsShopWeb.Areas.Identity.Pages.Account
 
             [Required]
             public string Name { get; set; }
-
             public string? StreetAdress { get; set; }
             public string? City { get; set; }
             public string? PostalCode { get; set; }

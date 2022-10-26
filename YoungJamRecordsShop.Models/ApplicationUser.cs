@@ -11,7 +11,7 @@ namespace YoungJamRecordsShop.Models
     public class ApplicationUser : IdentityUser
     {
         [Required]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         public string? StreetAdress { get; set; }
         public string? City { get; set; }

@@ -17,7 +17,7 @@ namespace YoungJamRecordsShop.Models
         public string? Author { get; set; }
 
         [Required]
-        public string EAN { get; set; }
+        public string? EAN { get; set; }
 
         [Range(0.01, 9999.99)]
         [Required]
@@ -34,12 +34,12 @@ namespace YoungJamRecordsShop.Models
         public Guid AlbumTypeId { get; set; }
 
         [ValidateNever]
-        public AlbumType AlbumType { get; set; }
+        public AlbumType? AlbumType { get; set; }
 
         [ValidateNever]
         public Guid CaseTypeId { get; set; }
 
         [ValidateNever]
-        public CaseType CaseType { get; set; }
+        public CaseType? CaseType { get; set; }
     }
 }

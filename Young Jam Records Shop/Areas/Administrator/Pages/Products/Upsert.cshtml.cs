@@ -9,12 +9,12 @@ namespace YoungJamRecordsShopWeb.Areas.Administrator.Pages.Products
     [BindProperties]
     public class UpsertModel : PageModel
     {
-        public List<SelectListItem> CaseTypeList { get; set; }
-        public List<SelectListItem> AlbumTypeList { get; set; }
+        public List<SelectListItem>? CaseTypeList { get; set; }
+        public List<SelectListItem>? AlbumTypeList { get; set; }
 
         private readonly IUnitOfWork _unitOfWork;
         private readonly IWebHostEnvironment _webHostEnvironment;
-        public Product Product { get; set; }
+        public Product? Product { get; set; }
 
         public UpsertModel(IUnitOfWork unitOfWork, IWebHostEnvironment webHostEnvironment)
         {
